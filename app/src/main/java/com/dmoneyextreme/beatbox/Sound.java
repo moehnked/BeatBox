@@ -4,6 +4,16 @@ public class Sound {
     private String mAssetPath;
     private String mName;
 
+    public Integer getmSoundId() {
+        return mSoundId;
+    }
+
+    public void setmSoundId(Integer mSoundId) {
+        this.mSoundId = mSoundId;
+    }
+
+    private Integer mSoundId;
+
     public Sound(String assetPath){
         mAssetPath = assetPath;
         String[] components = assetPath.split("/");
