@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.dmoneyextreme.beatbox.BeatBoxActivity.gSpeed;
+
 public class BeatBox {
     private static final String TAG = "BeatBox";
 
@@ -55,7 +57,7 @@ public class BeatBox {
         if(soundId == null){
             return;
         }
-        mSoundPool.play(soundId, 1.0f, 1.0f, 1, 0, 1.0f);
+        mSoundPool.play(soundId, 1.0f, 1.0f, 1, 0,  ((float)gSpeed / 100f));
     }
 
     private void load(Sound sound)throws IOException{

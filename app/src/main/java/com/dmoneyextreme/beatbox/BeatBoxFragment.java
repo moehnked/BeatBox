@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -19,6 +22,8 @@ import java.util.List;
 public class BeatBoxFragment extends Fragment {
 
     private BeatBox mBeatBox;
+    private SeekBar mSpeedbar;
+    private TextView mSeekProgress;
 
     public static BeatBoxFragment newInstance(){
         return new BeatBoxFragment();
@@ -88,4 +93,13 @@ public class BeatBoxFragment extends Fragment {
         super.onDestroy();
         mBeatBox.release();
     }
+
+//    @Override
+//    public void onViewCreated(View v, @Nullable Bundle savedInstanceState){
+//        mSeekProgress = getView().findViewById(R.id.speeedbar_progress);
+//        mSpeedbar = getView().findViewById(R.id.speedbar_seekbar);
+//
+//        mSeekProgress.setText("PEEEPEEPEPE");
+//
+//    }
 }
