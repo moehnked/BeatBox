@@ -19,7 +19,9 @@
             android:id="@+id/speeedbar_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/speedbar_label"/>
+            android:text="@string/speedbar_label"
+            android:textColor="@color/gray"
+            />
 
         <SeekBar
             android:layout_gravity="bottom"
